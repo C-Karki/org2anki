@@ -1,11 +1,8 @@
 # org2anki
-# v6
-# Final version
 # A script to parse my org notes and convert them into anki cards
 
 from orgparse import load
 from pathlib import Path
-import subprocess
 import os
 
 # org file to parse
@@ -76,8 +73,7 @@ def cardGen(fields, filePath):
 cards = fieldGen(orgFile)
 exportFile = '/home/chitij/Documents/studies/anki/respi_anki2.org'
 cardGen(cards, exportFile)
-#if ("anki" not in (p.name() for p in psutil.process_iter())):
-#    subprocess.Popen('anki')
+
 
 
 
